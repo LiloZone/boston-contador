@@ -1,0 +1,24 @@
+# Site
+title: Contador Boston Scientific
+subtitle: 
+
+# URL
+domain: 
+url: 
+baseurl: /
+permalink: :title/
+include: ['_pages']
+
+# Build settings
+markdown: kramdown
+port: 4442
+future: true
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
