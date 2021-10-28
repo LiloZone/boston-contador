@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import 'framework.css';
+
+@font-face {
+  font-family: SST-medium;
+  src: url(../fonts/SST\ Medium.ttf);
+  font-weight: medium;
+}
+@font-face {
+  font-family: SST-light;
+  src: url(../fonts/SST\ Light.ttf);
+  font-weight: light;
+}
+@font-face {
+  font-family: SST-light-italic;
+  src: url(../fonts/SST\ Light\ Italic.ttf);
+  font-weight: light-italic;
+}
+
+:root {
+  --color1: #ffffff;
+  --color2: #d9d9d9;
+  --flip-duration: .6s;
+}
+
+body {
+  font-family: SST-light;
+}
+
+h1 {
+  text-align: center;
+  font-family: SST-light-italic;
+}
+
+.digit-flipper {
+  display: inline-block;
+  height: 0.98em;
+  font-family: SST-medium;
+  font-size: 20vmin;
+  line-height: 1;
+  margin: 0 0.02em;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  position: relative;
+  width: 0.65em;
+}
+
+.digit-flipper__digit {
+  display: block;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.digit-flipper__digit-top,
+.digit-flipper__digit-bottom {
+  color: black;
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  width: 100%;
+}
+
+.digit-flipper__digit-top {
+  background-color: var(--color1);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-clip-path: inset(0 0 51% 0);
+          clip-path: inset(0 0 51% 0);
+  overflow: hidden;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.digit-flipper__digit-bottom {
+  background-color: var(--color2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-clip-path: inset(51% 0 0 0);
+          clip-path: inset(51% 0 0 0);
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+.digit-flipper__digit--flip-bottom .digit-flipper__digit-bottom {
+  -webkit-animation: flip-bottom var(--flip-duration) ease-in 0s 1 forwards;
+          animation: flip-bottom var(--flip-duration) ease-in 0s 1 forwards;
+}
+
+.digit-flipper__digit--flip-top .digit-flipper__digit-top {
+  -webkit-animation: flip-top var(--flip-duration) ease-in 0s 1 forwards;
+          animation: flip-top var(--flip-duration) ease-in 0s 1 forwards;
+}
+
+.digit-flipper__digit--flip-done .digit-flipper__digit-bottom {
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+@-webkit-keyframes flip-top {
+  from {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-top {
+  from {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+}
+@-webkit-keyframes flip-bottom {
+  from {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes flip-bottom {
+  from {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+body {
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #f6f6f6;
+  /* background-image: url("i/BSC_Arrows-Mark_RGB (5).svg"); */
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.controls {
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: inset -2px -2px 5px 0px rgba(0, 0, 0, 0.1), 5px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: 20px 0 auto;
+  padding: 4px 20px 20px;
+  text-align: center;
+}
+
+.cool-element {
+  background-color: #6a737b;
+  border-radius: 15px;
+  box-shadow: inset -2px -2px 10px 0px black, inset 4px 4px 10px 0px rgba(255, 255, 255, 0.4), 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  margin: -40px 0 auto;
+  padding: 20px 18px 16px;
+}
