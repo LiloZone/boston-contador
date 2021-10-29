@@ -27,17 +27,19 @@ body {
   height: 100%;
   text-align:center;
   font-family: SST-light;
-  background-color: #ffffff;
+  background: repeating-linear-gradient(#74ABDD, #74ABDD 49.9%, #498DCB 50.1%, #498DCB 100%);
 }
 
 h1 {
   text-align: center;
   font-family: SST-medium;
+  font-size: 80pt;
 }
 
-section {
+/* section {
   height: 1080px;
-}
+} */
+
 
 
 .digit-flipper {
@@ -150,11 +152,14 @@ section {
   }
 }
 body {
+  text-align:center;
+  font-family: SST-light;
+  /* background: repeating-linear-gradient(#00467F, #00467F 49.9%, #48B8D2 50.1%, #48B8D2 100%) !important;; */
+  background-image: url(../i/VidasSalvas.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-box-align: center;
           align-items: center;
-  background-color: #f6f6f6;
-  /* background-image: url("i/BSC_Arrows-Mark_RGB (5).svg"); */
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: flex;
   height: 100vh;
@@ -176,24 +181,9 @@ body {
 }
 
 .cool-element {
-  background-color: #6a737b;
+  background-color: #48B8D2;
   border-radius: 15px;
   box-shadow: inset -2px -2px 10px 0px black, inset 4px 4px 10px 0px rgba(255, 255, 255, 0.4), 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
   margin: -40px 0 auto;
   padding: 20px 18px 16px;
-}
-
-svg {
-  stroke-width: 4px;
-  stroke: #003c71;
-  /* stroke-dasharray: 1800;
-  stroke-dashoffset: 1500; */
-  fill: transparent;
-  /* animation: dash 7s linear forwards; */
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
