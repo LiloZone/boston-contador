@@ -27,6 +27,7 @@ body {
   text-align:center;
   font-family: SST-light;
   background-color: black;
+  cursor: none;
   -webkit-box-align: center;
           align-items: center;
   display: -webkit-box;
@@ -170,27 +171,6 @@ section {
   height: 100%;
 }
 
-img-back {
-  position: relative;
-  height: 100vh;
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: flex;
-  height: 100vh;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
-
-text-front {
-  position: absolute;
-  /* width: 100%; */
-}
-
-
 
 .controls {
   display: none;
@@ -203,6 +183,8 @@ text-front {
 }
 
 .cool-element {
+  position: relative;
+  top: 34%;
   background-color: #48B8D2;
   background-position: 50% 50%;
   border-radius: 15px;
@@ -211,6 +193,7 @@ text-front {
   padding: 20px 18px 16px;
   max-width: max-content;
   display: inline-block;
-  vertical-align: middle;
   justify-content: center;
+  align-items: center;
 }
+
