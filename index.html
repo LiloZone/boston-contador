@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/math.js"></script>
 </head>
 
 <body>
@@ -26,24 +26,15 @@
   </section>
 
   <section id="section2">
-    {% for contador in site.data.contador %}
-    {% assign nowDate = "now" | date: "%m-%d-%Y" %}
-    {% assign tableDate = contador.diaAno %}
-    {% if tableDate == nowDate %}
     <div class="controls">
-      <input id="my-counter" class="number-input" type="number" value="{{contador.final}}" />
+      <input id="my-counter" class="number-input" type="number" value="0" />
       <button class="number-button">contar</button>
     </div>
-    {% endif %}
-    {% endfor %}
-    <!-- <img src="i/VidasSalvas.svg" class="img-back"> -->
     <div class="cool-element"></div>
-    <!-- <h1 class="text-center pb-80 color-heading">Vidas salvas<br>esse ano</h1> -->
   </section>
 
   <section id="section3">
     <img src="i/logo-azul.jpg" class="img-fluid">
-
     <!-- <video width="1920" height="1080" autoplay muted loop>
       <source src="videos/BSC_AdvancingArrows_Outro.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -54,8 +45,8 @@
     <img src="i/TranformandoVidas.png" class="img-fluid">
   </section>
 
-  <script src="js/contador.js"></script>
-  <script src="js/timer.js"></script>
+  <script src="js/flip.js"></script>
+  <script src="js/change.js"></script>
 
 </body>
 

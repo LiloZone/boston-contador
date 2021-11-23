@@ -10,7 +10,7 @@ for (let i = 0; i < TOTAL_DAYS; i++) {
 }
 
 
-let seed = (new Date()).getFullYear();
+let seed = 0xABCD;
 function seededRandom() {
     const x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
@@ -44,7 +44,7 @@ function today() {
 
 function setCounter() {
     document.getElementById('my-counter').value = mCounter[today()];
-    setTimeout(setCounter, 60 * 60 * 1000);
+    setInterval(setCounter, 60 * 60 * 1000);
 }
 
 window.addEventListener('DOMContentLoaded', () => {

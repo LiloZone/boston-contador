@@ -153,16 +153,17 @@ class FlipCounter {
 
 
 // Handles the input field, for the demo
-const onClick = () => {
-  let num = Number(numberInput.value);
-  if (num >= 0) {
-    let counter = new FlipCounter(element, num);
-    counter.play();
-  }
-};
+// const onClick = () => {
+//   let num = Number(numberInput.value);
+//   if (num >= 0) {
+//     let counter = new FlipCounter(element, num);
+//     counter.play();
+//   }
+// };
 
-numberSubmit.addEventListener("click", onClick);
+// numberSubmit.addEventListener("click", onClick);
 
 // kick off the initial one
-const counter = new FlipCounter(element, Number(numberInput.value));
+const counter = new FlipCounter(element, Number(mCounter[today()]));
 counter.play();
+
